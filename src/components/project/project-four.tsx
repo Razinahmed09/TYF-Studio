@@ -3,14 +3,14 @@ import Image from "next/image";
 
 import { ProjectShape, RightArrow } from "../svg";
 // images
-import port_1 from "@/assets/img/home-03/portfolio/port-1.jpg";
-import port_2 from "@/assets/img/home-03/portfolio/port-2.jpg";
-import port_3 from "@/assets/img/home-03/portfolio/port-3.jpg";
-import port_4 from "@/assets/img/home-03/portfolio/port-4.jpg";
-import port_5 from "@/assets/img/home-03/portfolio/port-5.jpg";
-import port_6 from "@/assets/img/home-03/portfolio/port-6.jpg";
-import port_7 from "@/assets/img/home-03/portfolio/port-7.jpg";
-import port_8 from "@/assets/img/home-03/portfolio/port-8.jpg";
+import port_1 from "@/assets/img/home-04/portfolio/pro3.png";
+import port_2 from "@/assets/img/home-04/portfolio/pro5.png";
+import port_3 from "@/assets/img/home-04/portfolio/pro6.png";
+import port_4 from "@/assets/img/home-04/portfolio/pro7.png";
+import port_5 from "@/assets/img/home-04/portfolio/pro3.png";
+import port_6 from "@/assets/img/home-04/portfolio/pro9.png";
+import port_7 from "@/assets/img/home-04/portfolio/pro10.png";
+import port_8 from "@/assets/img/home-04/portfolio/pro8.png";
 import Link from "next/link";
 
 // portfolio data
@@ -19,29 +19,29 @@ const project_data = [
     id: 1,
     img_1: port_1,
     img_2: port_2,
-    meta: "DEC 2024 . Creative",
-    title: "Pellente dapibus",
+    meta: "TYF Studio",
+    title: "Luxury Door Design",
   },
   {
     id: 2,
     img_1: port_3,
     img_2: port_4,
-    meta: "NOV 2024 . Creative",
-    title: "Chania tourism",
+    meta: "TYF Studio",
+    title: "Futuristic Metallic Gate",
   },
   {
     id: 3,
     img_1: port_5,
     img_2: port_6,
-    meta: "OCT 2024 . Creative",
-    title: "Fashion sentence",
+    meta: "TYF Studio",
+    title: "Sun-Guardian Metal Gate",
   },
   {
     id: 4,
     img_1: port_7,
     img_2: port_8,
-    meta: "SEP 2024 . Creative",
-    title: "Fashion sentence",
+    meta: "TYF Studio",
+    title: "Guardian Totem Gate",
   },
 ];
 
@@ -58,15 +58,15 @@ export default function ProjectFour({ style_2 = false }: IProps) {
             <div className="col-xl-7">
               <div className="tp-project-3-title-box p-relative mb-150">
                 <h4 className="tp-section-title-200 tp_reveal_anim">
-                  Latest <span>Projects</span>
+                  Our <span>Gallery</span>
                 </h4>
                 <div className="tp-project-3-btn-box">
                   <Link
                     className="tp-btn-zikzak p-relative"
-                    href="/portfolio-wrapper"
+                    href="#"
                   >
                     <span className="zikzak-content">
-                      See <br /> All Project
+                      Explore <br /> More
                       <RightArrow clr="#19191A" />
                     </span>
                     <ProjectShape />
@@ -94,13 +94,13 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                     <div className="tp-project-3-content text-center">
                       <span className="tp-project-3-meta">{item.meta} </span>
                       <h4 className="tp-project-3-title-sm">
-                        <Link href="/portfolio-details-1">{item.title}</Link>
+                        <Link href="#">{item.title}</Link>
                       </h4>
                       <Link
                         className="tp-btn-project-sm"
-                        href="/portfolio-details-1"
+                        href="#"
                       >
-                        See Project
+                        Exlpore More
                       </Link>
                     </div>
                     <div className="tp-project-3-border color-1 text-center">

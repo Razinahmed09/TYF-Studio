@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 // internal imports
 import shape from '@/assets/img/home-03/about/ab-shape-img.png';
+import scul from '@/assets/img/home-04/about/scul.png';
 import { ArrowBg, RightArrowTwo,FirstBracket, FirstBracketTwo } from "../svg";
 
 export default function AboutThree() {
@@ -11,46 +12,57 @@ export default function AboutThree() {
     <div className="tp-about-3-area pt-120 pb-110">
       <div className="container">
         <div className="row">
-          <div className="col-xl-11">
+          <div className="col-xl-11 pb-60">
             <div className="tp-about-3-title-box">
               <span className="tp-section-subtitle-2 tp_fade_bottom">
                 <span>
                   <FirstBracket />
                 </span>
-                <span className="tp-subtitle-text tp_text_invert">
-                  What we do
+                <span className="tp-subtitle-text tp_text_invert text-white">
+                 Crafted Through Time
                 </span>
                 <span>
                   <FirstBracketTwo />
                 </span>
               </span>
-              <h4 className="tp-section-title-90 tp_text_invert tp_fade_bottom">
-                We tell visual stories through smooth motions{" "}
+              <h4 className="tp-section-title-90 tp_text_invert tp_fade_bottom text-white"> 
+                When Metal Begins to Remember{" "}
                 <span>
                   {" "}
-                  <br />& fluid Website
+                  <br />
                 </span>
               </h4>
             </div>
           </div>
         </div>
-        <div className="row align-items-center">
+        <div className="row">
           <div className="col-xl-6 col-lg-6 col-md-4">
+            <div className="about-imgOne">
+             <Image
+              src={scul}
+              alt="widget"
+              width={500}
+              height={500}
+              style={{borderRadius: '20px'}}
+              className="h-auto w-auto tp_fade_bottom"
+            />
+            </div>
             <div className="tp-about-3-shape text-lg-end">
-              <Image src={shape} alt="shape" style={{ height: "auto" }} />
+              <Image src={shape} alt="shape" style={{ height: "auto", filter: "invert(1)" }} />
             </div>
           </div>
           <div className="col-xl-6 col-lg-6 col-md-8">
-            <div className="tp-about-3-content">
-              <p className="mb-30 tp_fade_bottom">
+            <div className="tp-about-3-content pe-5">
+              <h2 className="mb-30 tp_fade_bottom text-white">Every sculpture begins as a question: what can metal remember?</h2>
+              <p className="mb-30 tp_fade_bottom text-white">
                 We are a creative design studio based in London. We specialize
                 in Branding, and Web experiences for beauty.
               </p>
-              <p className="mb-45 tp_fade_bottom">
+              <p className="mb-45 tp_fade_bottom text-white">
                 we’re all about digital experiences. The most creative idea and
                 the most perfect execution mean nothing.
               </p>
-              <Link className="tp-btn-black-2 tp_fade_bottom" href="/about-us">
+              <Link className="tp-btn-black-2 tp_fade_bottom" href="#">
                 About Us
                 <span className="p-relative">
                   <RightArrowTwo />

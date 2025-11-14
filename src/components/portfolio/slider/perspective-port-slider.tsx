@@ -3,41 +3,41 @@ import Image from "next/image";
 import { Share } from "../../svg";
 import Link from "next/link";
 // images
-import port_1 from "@/assets/img/home-09/slider/slider-1.jpg";
-import port_2 from "@/assets/img/home-09/slider/slider-2.jpg";
-import port_3 from "@/assets/img/home-09/slider/slider-3.jpg";
-import port_4 from "@/assets/img/home-09/slider/slider-4.jpg";
-import port_5 from "@/assets/img/home-09/slider/slider-5.jpg";
+import port_1 from "@/assets/img/home-09/slider/pro1.png";
+import port_2 from "@/assets/img/home-09/slider/pro2.png";
+import port_3 from "@/assets/img/home-09/slider/pro3.png";
+import port_4 from "@/assets/img/home-09/slider/pro4.png";
+import port_5 from "@/assets/img/home-09/slider/pro5.png";
 
 const portfolio_data = [
   {
     id: 1,
-    title: "Keepgrading",
-    category: "Branding",
+    title: "Metal Door",
+    category: "TYF Studio",
     image: port_1,
   },
   {
     id: 2,
-    title: "Fiedunit",
-    category: "Branding",
+    title: "Metal Sculpture",
+    category: "TYF Studio",
     image: port_2,
   },
   {
     id: 3,
-    title: "Roadtrip",
-    category: "Branding",
+    title: "Signature Sculpture",
+    category: "TYF Studio",
     image: port_3,
   },
   {
     id: 4,
-    title: "Perspective",
-    category: "Photography",
+    title: "Art Sculpture",
+    category: "TYF Studio",
     image: port_4,
   },
   {
     id: 5,
-    title: "Roadtrip",
-    category: "Branding",
+    title: "Metal Wall",
+    category: "TYF Studio",
     image: port_5,
   },
 ];
@@ -67,10 +67,11 @@ export default function PerspectivePortfolioSlider() {
                           <h1
                             className="tp-portfolio-9-title tp_reveal_anim not-hide-cursor"
                             data-cursor="View<br>Demo"
+                            style={{fontSize: "100px"}}
                           >
                             <Link
                               className="cursor-hide"
-                              href="/portfolio-showcase-details-2"
+                              href="#"
                             >
                               {item.title}
                             </Link>

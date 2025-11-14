@@ -3,11 +3,11 @@ import Image from "next/image";
 import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
 
 // images
-import logo from "@/assets/img/logo/logo.png";
-import gallery_1 from "@/assets/img/menu/offcanvas/offcanvas-1.jpg";
-import gallery_2 from "@/assets/img/menu/offcanvas/offcanvas-2.jpg";
-import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
-import gallery_4 from "@/assets/img/menu/offcanvas/offcanvas-4.jpg";
+import logo from "@/assets/img/logo/TYFLOGO.png";
+import gallery_1 from "@/assets/img/products/Ash Hymn-min.jpg";
+import gallery_2 from "@/assets/img/products/Becoming-min.jpg";
+import gallery_3 from "@/assets/img/products/Continuum-min.jpg";
+import gallery_4 from "@/assets/img/products/Echo Forge-min.jpg";
 import MobileMenus from "./mobile-menus";
 import Link from "next/link";
 
@@ -42,7 +42,7 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
               <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+              <p>Welcome to our world of handcrafted metal artistry, where every piece is forged with fire, creativity, and precision. </p>
             </div>
             <div className="tp-main-menu-mobile d-xl-none">
               <MobileMenus />
@@ -65,13 +65,13 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
 
               <ul>
                 <li>
-                  <Link href="tel:1245654">+ 4 20 7700 1007</Link>
+                  <Link href="tel:1245654">+ 0 123 4567 8910</Link>
                 </li>
                 <li>
-                  <Link href="mailto:hello@diego.com">hello@diego.com</Link>
+                  <Link href="mailto:hello@diego.com">example@gmail.com</Link>
                 </li>
                 <li>
-                  <Link href="#">Avenue de Roma 158b, Lisboa</Link>
+                  <Link href="#">Your Text Address Here</Link>
                 </li>
               </ul>
             </div>

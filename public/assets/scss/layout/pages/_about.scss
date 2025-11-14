@@ -119,8 +119,33 @@
         }
         & img{
             animation: rotate2 5s linear infinite;
+            position: absolute;
+            top: -80px;
         }
     }
+}
+.tp-about-3-shape {
+    position: relative;
+}
+.about-imgOne img {
+    width: 80% !important;
+    border-radius: 50px !important;
+}
+.tp-about-3-area {
+    background: linear-gradient(90deg, #6b442d 0%, #41342c 54%, #2b2b2b 100%);
+}
+.tp-about-3-area .tp-btn-black-2 {
+    // background: linear-gradient(90deg, #6b442d 0%, #41342c 54%, #2b2b2b 100%) !important;
+    color: white !important;
+}
+ .tp-about-3-area .tp-btn-black-2:hover span .svg-icon {
+    color: black;
+}
+.tp-about-3-area  .tp_text_invert > div {
+    background-image:linear-gradient(to right, #ffffff 50%, #c2c2c280 50%) !important;
+}
+.tp-about-3-area .tp-btn-black-2:hover {
+    // color: white !important;
 }
 .tp-about-4{
     &-title{

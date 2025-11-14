@@ -7,7 +7,7 @@ const HeaderMenus = () => {
     <ul>
       {menu_data.map((menu) => (
         <li key={menu.id} className="has-dropdown">
-          <Link href={menu.link}>{menu.title}</Link>
+          <Link className="text-white" href={menu.link}>{menu.title}</Link>
           {menu.home_menus ? (
             <div className="tp-submenu submenu tp-mega-menu">
               <div className="tp-menu-fullwidth">

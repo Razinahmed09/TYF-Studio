@@ -509,6 +509,9 @@
         }
     }
 }
+.tp-project-3-area {
+        background: linear-gradient(90deg, rgba(107, 68, 45, 1) 0%, rgba(65, 52, 44, 1) 54%, rgba(43, 43, 43, 1) 100%);
+}
 .tp-reveal-line-2{
     overflow: hidden;
     padding-bottom: 40px;
@@ -520,6 +523,9 @@
 .tp_img_reveal img {
 	transform-origin: left;
     overflow: hidden;
+}
+.tp-project-3-border span {
+    background: linear-gradient(90deg, #c6c6c6 0%, #cdb8b8 54%, #ad8367 100%);
 }
 .tp-project-4 {
     &-area{

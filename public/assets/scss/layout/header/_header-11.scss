@@ -259,7 +259,7 @@
 .tp-inner-header-area{
     &.transparent{
         .tp-header-bar button span {
-            background-color: var(--tp-common-white);
+            background-color: var(--tp-common-black);
         }
     }
     &.header-sticky{
@@ -288,3 +288,6 @@
 }
 
 
+.tp-offcanvas-open-btn span {
+    background-color: white !important;
+}

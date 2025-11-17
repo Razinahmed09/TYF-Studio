@@ -8,29 +8,29 @@ import shape from "@/assets/img/inner-about/about/shape-1.png";
 // import shape from "@/assets/img/home-04/portfolio/galleryimage01.png";
 
 export default function ContactTwo() {
-  const images = [
-    "/assets/img/home-04/portfolio/galleryimage01.png",
-    "/assets/img/home-04/portfolio/galleryimage02.png",
-    "/assets/img/home-04/portfolio/galleryimage03.png",
-    "/assets/img/home-04/portfolio/gallerimage04.png",
-    "/assets/img/home-04/portfolio/gallerimage05.png"
-  ];
+  // const images = [
+  //   "/assets/img/home-04/portfolio/galleryimage01.png",
+  //   "/assets/img/home-04/portfolio/galleryimage02.png",
+  //   "/assets/img/home-04/portfolio/galleryimage03.png",
+  //   "/assets/img/home-04/portfolio/gallerimage04.png",
+  //   "/assets/img/home-04/portfolio/gallerimage05.png"
+  // ];
 
-  const [current, setCurrent] = useState(0);
-  const [fade, setFade] = useState(true);
+  // const [current, setCurrent] = useState(0);
+  // const [fade, setFade] = useState(true);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false); // fade out
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setFade(false); // fade out
 
-      setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % images.length); // switch image
-        setFade(true); // fade in
-      }, 500); // fade duration (ms)
-    }, 1500); // time per image (ms)
+  //     setTimeout(() => {
+  //       setCurrent((prev) => (prev + 1) % images.length); // switch image
+  //       setFade(true); // fade in
+  //     }, 500); // fade duration (ms)
+  //   }, 1500); // time per image (ms)
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
 
   return (
@@ -57,7 +57,7 @@ export default function ContactTwo() {
                 alt="shape"
               />
               <div className="imgChanger" style={{ width: "50%", position: "relative" }}>
-                 <img
+                 {/* <img
                     src={images[current]}
                     alt="slider"
                     style={{
@@ -67,7 +67,7 @@ export default function ContactTwo() {
                       transition: "opacity 0.4s ease-in-out",
                       opacity: fade ? 1 : 0
                     }}
-                  />
+                  /> */}
               </div>
             </div>
           </div>

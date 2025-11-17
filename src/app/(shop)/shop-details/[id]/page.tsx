@@ -3,20 +3,26 @@ import { PageParamsProps } from '@/types/custom-d-t';
 import product_data from '@/data/product-data';
 import React from 'react';
 
-export async function generateMetadata(props: PageParamsProps) {
-    const resolvedParams = await props.params;
-    const { id } = resolvedParams;
-    const product = product_data.find((item) => item.id == Number(id));
+// 1️⃣ REQUIRED FOR STATIC EXPORT
+export async function generateStaticParams() {
+    return product_data.map((item) => ({
+        id: item.id.toString(),
+    }));
+}
+
+// 2️⃣ SEO metadata
+export async function generateMetadata({ params }: PageParamsProps) {
+    const { id } = await params;
+    const product = product_data.find((item) => item.id === Number(id));
+
     return {
-        title: product?.title ? product.title : "product Details",
+        title: product?.title ? product.title : "Product Details",
     };
 }
 
-export default async function ProductDetails(props: PageParamsProps) {
-    const resolvedParams = await props.params;
-    const { id } = resolvedParams;
-    
-    return (
-        <ShopDetailsMain id={id} />
-    );
+// 3️⃣ PAGE COMPONENT
+export default async function ProductDetails({ params }: PageParamsProps) {
+    const { id } = await params;
+
+    return <ShopDetailsMain id={id} />;
 }

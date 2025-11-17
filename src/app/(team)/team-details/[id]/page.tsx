@@ -1,25 +1,28 @@
-
 import team_data from '@/data/team-data';
 import TeamDetailsMain from '@/pages/team/team-details';
 import { PageParamsProps } from '@/types/custom-d-t';
 import React from 'react';
 
-export async function generateMetadata(props: PageParamsProps) {
-    const resolvedParams = await props.params;
-    const { id } = resolvedParams;
-    const team = team_data.find((team) => team.id == Number(id));
+// 1️⃣ REQUIRED FOR STATIC EXPORT
+export async function generateStaticParams() {
+    return team_data.map((member) => ({
+        id: member.id.toString(),
+    }));
+}
+
+// 2️⃣ SEO metadata
+export async function generateMetadata({ params }: PageParamsProps) {
+    const { id } = await params;
+    const team = team_data.find((item) => item.id === Number(id));
+
     return {
-        title: team?.name ? team.name : "Team Details",
+        title: team?.name ? team.name : 'Team Details',
     };
 }
 
-export default async function BlogDetails(props: PageParamsProps) {
-    const resolvedParams = await props.params;
-    const { id } = resolvedParams;
+// 3️⃣ PAGE COMPONENT
+export default async function TeamDetailsPage({ params }: PageParamsProps) {
+    const { id } = await params;
 
-    return (
-        <TeamDetailsMain id={id} />
-    );
+    return <TeamDetailsMain id={id} />;
 }
-
-

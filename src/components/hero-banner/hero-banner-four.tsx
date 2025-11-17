@@ -13,11 +13,11 @@ export default function HeroBannerFour() {
     <div className="tp-hero-3-area tp-hero-3-ptb fix" style={{ paddingTop: "90px ", paddingBottom: "0" }}>
 
       <Swiper
-        // modules={[Autoplay]}
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+        modules={[Autoplay]}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         loop
         speed={900}
         slidesPerView={1}

@@ -3,22 +3,26 @@ import BlogDetailsMain from '@/pages/blog/blog-details';
 import { PageParamsProps } from '@/types/custom-d-t';
 import React from 'react';
 
-export async function generateMetadata(props: PageParamsProps) {
-    const resolvedParams = await props.params;
-    const { id } = resolvedParams;
-    const blog = blog_data.find((blog) => blog.id == Number(id));
-    return {
-        title: blog?.title ? blog.title : "Blog Details",
-    };
+// 1️⃣ REQUIRED for static export
+export async function generateStaticParams() {
+  return blog_data.map((blog) => ({
+    id: blog.id.toString(),
+  }));
 }
 
-export default async function BlogDetailsPage(props: PageParamsProps) {
-    const resolvedParams = await props.params;
-    const { id } = resolvedParams;
+// 2️⃣ Metadata (safe for static export)
+export async function generateMetadata({ params }: PageParamsProps) {
+  const { id } = await params;
+  const blog = blog_data.find((item) => item.id == Number(id));
 
-    return (
-        <BlogDetailsMain id={id} />
-    );
+  return {
+    title: blog?.title || "Blog Details",
+  };
 }
 
+// 3️⃣ Page Component
+export default async function BlogDetailsPage({ params }: PageParamsProps) {
+  const { id } = await params;
 
+  return <BlogDetailsMain id={id} />;
+}

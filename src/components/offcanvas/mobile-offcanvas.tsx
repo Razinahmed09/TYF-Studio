@@ -4,10 +4,10 @@ import { Behance, CloseTwo, Dribble, Facebook, InstagramTwo, Twitter, Youtube } 
 
 // images
 import logo from "@/assets/img/logo/TYFLOGO.png";
-import gallery_1 from "@/assets/img/products/Ash Hymn-min.jpg";
-import gallery_2 from "@/assets/img/products/Becoming-min.jpg";
-import gallery_3 from "@/assets/img/products/Continuum-min.jpg";
-import gallery_4 from "@/assets/img/products/Echo Forge-min.jpg";
+import gallery_1 from "@/assets/img/products/port1.png";
+import gallery_2 from "@/assets/img/products/port2.png";
+import gallery_3 from "@/assets/img/products/port3.png";
+import gallery_4 from "@/assets/img/products/port4.png";
 import MobileMenus from "./mobile-menus";
 import Link from "next/link";
 import { Linkedin } from "lucide-react";

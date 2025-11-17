@@ -26,8 +26,8 @@ export default function ContactTwo() {
       setTimeout(() => {
         setCurrent((prev) => (prev + 1) % images.length); // switch image
         setFade(true); // fade in
-      }, 200); // fade duration (ms)
-    }, 400); // time per image (ms)
+      }, 500); // fade duration (ms)
+    }, 1500); // time per image (ms)
 
     return () => clearInterval(interval);
   }, []);
@@ -56,7 +56,7 @@ export default function ContactTwo() {
                 src={shape}
                 alt="shape"
               />
-              <div style={{ width: "50%", position: "relative" }}>
+              <div className="imgChanger" style={{ width: "50%", position: "relative" }}>
                  <img
                     src={images[current]}
                     alt="slider"

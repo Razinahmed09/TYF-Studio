@@ -3,14 +3,14 @@ import Image from "next/image";
 
 import { ProjectShape, RightArrow } from "../svg";
 // images
-import port_1 from "@/assets/img/home-04/portfolio/pro3.png";
-import port_2 from "@/assets/img/home-04/portfolio/pro5.png";
-import port_3 from "@/assets/img/home-04/portfolio/pro6.png";
-import port_4 from "@/assets/img/home-04/portfolio/pro7.png";
-import port_5 from "@/assets/img/home-04/portfolio/pro3.png";
-import port_6 from "@/assets/img/home-04/portfolio/pro9.png";
-import port_7 from "@/assets/img/home-04/portfolio/pro10.png";
-import port_8 from "@/assets/img/home-04/portfolio/pro8.png";
+import port_1 from "@/assets/img/products/port1.png";
+import port_2 from "@/assets/img/products/port2.png";
+import port_3 from "@/assets/img/products/port3.png";
+import port_4 from "@/assets/img/products/port4.png";
+import port_5 from "@/assets/img/products/port5.png";
+import port_6 from "@/assets/img/products/port6.png";
+import port_7 from "@/assets/img/products/port7.png";
+import port_8 from "@/assets/img/products/port8.png";
 import Link from "next/link";
 
 // portfolio data
@@ -20,28 +20,28 @@ const project_data = [
     img_1: port_1,
     img_2: port_2,
     meta: "TYF Studio",
-    title: "Luxury Door Design",
+    title: "Modern Metal Expressions",
   },
   {
     id: 2,
     img_1: port_3,
     img_2: port_4,
     meta: "TYF Studio",
-    title: "Futuristic Metallic Gate",
+    title: "Sculpted Motion",
   },
   {
     id: 3,
     img_1: port_5,
     img_2: port_6,
     meta: "TYF Studio",
-    title: "Sun-Guardian Metal Gate",
+    title: "Abstract Metal Forms",
   },
   {
     id: 4,
     img_1: port_7,
     img_2: port_8,
     meta: "TYF Studio",
-    title: "Guardian Totem Gate",
+    title: "Art in Steel & Shape",
   },
 ];
 

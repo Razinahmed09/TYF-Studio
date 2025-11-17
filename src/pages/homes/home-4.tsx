@@ -1,6 +1,7 @@
 "use client";
+
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import React, { useEffect } from "react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
 import { ScrollSmoother, ScrollTrigger, SplitText, cursorAnimation } from "@/plugins";
 import { useGSAP } from "@gsap/react";
@@ -9,35 +10,110 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
 // internal imports
 import Wrapper from "@/layouts/wrapper";
 import HeaderOne from "@/layouts/headers/header-one";
-import HeroBannerTwo from "@/components/hero-banner/hero-banner-two";
 import HeroBannerFour from "@/components/hero-banner/hero-banner-four";
 import GalleryOne from "@/components/gallery/gallery-one";
 import AboutThree from "@/components/about/about-three";
 import MissionOne from "@/components/mission/mission-one";
-import BrandThree from "@/components/brand/brand-three";
 import ProjectFour from "@/components/project/project-four";
 import ContactTwo from "@/components/contact/contact-two";
-
-
-import { perspective } from "@/utils/perspective-anim";
-import PerspectivePortfolioSlider from "@/components/portfolio/slider/perspective-port-slider";
-import ThemeSetting from "@/components/theme-setting";
-
-
-
-// import VideoThree from "@/components/video/video-three";
-import ServiceFour from "@/components/service/service-four";
-import ContactOne from "@/components/contact/contact-one";
 import FooterFour from "@/layouts/footers/footer-four";
+import PerspectivePortfolioSlider from "@/components/portfolio/slider/perspective-port-slider";
+
+// animations
+import { perspective } from "@/utils/perspective-anim";
 import { textInvert } from "@/utils/text-invert";
 import { fadeAnimation, revelAnimationOne } from "@/utils/title-animation";
 import { projectThreeAnimation } from "@/utils/project-anim";
 import { ctaAnimation } from "@/utils/cta-anim";
 
-const HomeFourMain = () => {
+// -----------------------
+// Loader Component
+// -----------------------
+const Loader = () => {
+  const [loading, setLoading] = useState(true);
 
-  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      gsap.to("#loader-wrapper", {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        onComplete: () => setLoading(false),
+      });
+    }, 800); // adjust delay if needed
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!loading) return null;
+
+  return (
+    <div
+      id="loader-wrapper"
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        background: "linear-gradient(90deg, #6b442d 0%, #41342c 54%, #2b2b2b 100%);",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 9999,
+      }}
+    >
+      <div style={{ display: "flex", gap: "10px" }}>
+        <span
+          style={{
+            width: "15px",
+            height: "15px",
+            background: "#8a5e47ff",
+            borderRadius: "50%",
+            animation: "bounce 0.6s infinite alternate",
+            animationDelay: "0s",
+          }}
+        ></span>
+        <span
+          style={{
+            width: "15px",
+            height: "15px",
+            background: "#ffffffff",
+            borderRadius: "50%",
+            animation: "bounce 0.6s infinite alternate",
+            animationDelay: "0.2s",
+          }}
+        ></span>
+        <span
+          style={{
+            width: "15px",
+            height: "15px",
+            background: "#6b442d",
+            borderRadius: "50%",
+            animation: "bounce 0.6s infinite alternate",
+            animationDelay: "0.4s",
+          }}
+        ></span>
+      </div>
+
+      <style>
+        {`
+          @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+// -----------------------
+// HomeFourMain Component
+// -----------------------
+const HomeFourMain = () => {
   useScrollSmooth();
+
+  // add smooth scroll class
   useEffect(() => {
     document.body.classList.add("tp-smooth-scroll");
     return () => {
@@ -45,20 +121,22 @@ const HomeFourMain = () => {
     };
   }, []);
 
-   useEffect(() => {
-      if (typeof window !== 'undefined' && document.querySelector('.tp-magic-cursor')) {
-        cursorAnimation();
-      }
-    }, []);
+  // cursor animation
+  useEffect(() => {
+    if (typeof window !== "undefined" && document.querySelector(".tp-magic-cursor")) {
+      cursorAnimation();
+    }
+  }, []);
 
-   useGSAP(() => {
-      const timer = setTimeout(() => {
-        perspective();
-        revelAnimationOne();
-      }, 100);
-      return () => clearTimeout(timer);
-    })
-    
+  // GSAP animations
+  useGSAP(() => {
+    const timer = setTimeout(() => {
+      perspective();
+      revelAnimationOne();
+    }, 100);
+    return () => clearTimeout(timer);
+  });
+
   useGSAP(() => {
     const timer = setTimeout(() => {
       fadeAnimation();
@@ -70,98 +148,65 @@ const HomeFourMain = () => {
     return () => clearTimeout(timer);
   });
 
-
-  
   return (
-    <Wrapper>
+    <>
+      {/* Loader */}
+      <Loader />
 
-      {/* header area start */}
-      <HeaderOne />
-      {/* header area end */}
+      <Wrapper>
+        {/* Header */}
+        <HeaderOne />
 
-    {/* magic cursor start */}
-      <div id="magic-cursor">
-        <div id="ball"></div>
-      </div>
-      {/* magic cursor end */}
+        {/* Magic Cursor */}
+        <div id="magic-cursor">
+          <div id="ball"></div>
+        </div>
 
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main>
-            {/* hero area start */}
-              {/* <HeroBannerTwo /> */}
-            {/* hero area end */}
-
-            {/* hero area start */}
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            <main>
+              {/* Hero Banner */}
               <HeroBannerFour />
-            {/* hero area end */}
 
-            {/* about area start */}
-            <AboutThree />
-            {/* about area end */}
+              {/* About */}
+              <AboutThree />
 
-            {/* gallery area start */}
-            <GalleryOne />
-            {/* gallery area end */}
+              {/* Gallery */}
+              <GalleryOne />
 
-            {/* brand area start */}
-            {/* <BrandThree /> */}
-            {/* brand area end */}
+              {/* Projects */}
+              <ProjectFour />
 
+              {/* Perspective Portfolio */}
+              <PerspectivePortfolioSlider />
 
-            {/* project area start */}
-            <ProjectFour />
-            {/* project area end */}
+              {/* Mission */}
+              <MissionOne />
 
-          
-           
-              {/* perspective area start */}
-                <PerspectivePortfolioSlider />
-              {/* perspective area end */}
-           
-                   
-
-            {/* video area start */}
-            {/* <VideoThree /> */}
-            {/* video area end */}
-
-            {/* mission area start */}
-             <MissionOne />
-            {/* mission area end */}
-
-            {/* service area start */}
-            {/* <ServiceFour /> */}
-            {/* service area end */}
-
-
-             {/* hero area start */}
+              {/* Get in Touch Hero Section */}
               <div className="tm-hero-area tm-hero-ptb p-relative pt-0">
                 <div className="container">
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="tm-hero-content">
                         <span className="tm-hero-subtitle">Liko Studio</span>
-                        <h4 className="tm-hero-title-big tp-char-animation">
-                          Get in touch
-                        </h4>
+                        <h4 className="tm-hero-title-big tp-char-animation">Get in touch</h4>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* hero area end */}
-             {/* contact area */}
-                          <ContactTwo/>
-              {/* contact area */}
 
-          </main>
+              {/* Contact */}
+              <ContactTwo />
+            </main>
 
-          {/* footer area */}
-          <FooterFour />
-          {/* footer area */}
+            {/* Footer */}
+            <FooterFour />
+          </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </>
   );
 };
 

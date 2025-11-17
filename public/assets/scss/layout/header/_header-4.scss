@@ -151,7 +151,7 @@
         top: 274px !important;
     }
     .tp-portfolio-9-area h1 {
-        font-size: 55px !important;
+        font-size: 42px !important;
     }
     .tp-mission-thumb {
         height: auto !important;
@@ -159,7 +159,36 @@
     .tp-mission-thumb img {
         width: 50% !important;
     }
-    
+    .tm-hero-title-big {
+                font-size: 60px;
+                letter-spacing: .2px;
+    }
+    .imgChanger {
+        display: none;
+    }
+    .tm-hero-title-big {
+        font-size: 62px !important;
+        letter-spacing: .1px !important;
+    }
+    .tp-footer-3-area {
+        padding: 2rem 0;
+    }
+    .tp-footer-3-logo {
+        margin-bottom: 0 !important;
+    }
+    .tm-hero-ptb {
+        padding-bottom: 0 !important;
+    }
+    .tp-mission-area {
+        padding: 1rem 0;
+        margin-bottom: 3rem;
+    }
+    .tp-footer-3-logo-box {
+        padding: 2rem 0 ;
+    }
+    .tp-footer-3-logo-box .mb-100 {
+        margin-bottom: 20px;
+    }
 }
 @media (max-width:399px) {  
     .tp-hero-3-area {

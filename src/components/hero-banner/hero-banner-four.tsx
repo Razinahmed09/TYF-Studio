@@ -17,6 +17,7 @@ export default function HeroBannerFour() {
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true, // ← hover par autoplay pause
         }}
         loop
         speed={900}

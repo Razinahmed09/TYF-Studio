@@ -10,14 +10,14 @@ import "swiper/css";
 
 export default function HeroBannerFour() {
   return (
-    <div className="tp-hero-3-area tp-hero-3-ptb fix" style={{ paddingTop: "90px !important", paddingBottom: "0" }}>
+    <div className="tp-hero-3-area tp-hero-3-ptb fix" style={{ paddingTop: "90px ", paddingBottom: "0" }}>
 
       <Swiper
-        modules={[Autoplay]}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
+        // modules={[Autoplay]}
+        // autoplay={{
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // }}
         loop
         speed={900}
         slidesPerView={1}
@@ -25,7 +25,7 @@ export default function HeroBannerFour() {
       >
         {/* SLIDE 01 */}
         <SwiperSlide className="overlap-slide">
-          <div className="" style={{
+          <div className="parentslider_Inner" style={{
             backgroundImage: "url('/assets/img/home-04/hero/heroImg2.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",

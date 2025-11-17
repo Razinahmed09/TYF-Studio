@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { UpArrow } from "../svg";
 // images
-import m_img_1 from "@/assets/img/home-05/mission/mission-1.jpg";
-import m_img_2 from "@/assets/img/home-05/mission/mission-2.jpg";
+import shape from '@/assets/img/home-03/about/ab-shape-img.png';
+import m_img_1 from "@/assets/img/home-04/about/tyf-person.png";
+// import m_img_2 from "@/assets/img/home-04/hero/slideimage01.png";
 
 export default function MissionOne() {
   return (
@@ -14,11 +15,12 @@ export default function MissionOne() {
           <div className="col-xl-12">
             <div className="tp-mission-title-box mb-80 text-center">
               <h4 className="tp-about-5-title tp_fade_bottom p-relative">
-                <span className="tp-about-5-subtitle d-none d-lg-block tp_fade_left">
-                  Our vision
+                <span className="tp-about-5-subtitle d-none d-lg-block tp_fade_left"> 
+                 Our Approach
                 </span>
-                We Help Create <br /> and Supercharge Brands
+                TYF Studio —  <br />  Hand-Forged Art & Sculptural Design
               </h4>
+              
             </div>
           </div>
         </div>
@@ -30,21 +32,22 @@ export default function MissionOne() {
                 src={m_img_1}
                 alt="thumb-img"
                 style={{ height: "auto" }}
+                
               />
+              <div className="tp-about-3-shape text-lg-end">
+              <Image src={shape} alt="shape" style={{ height: "auto", filter: "invert(1)" }} />
+            </div>
             </div>
           </div>
           <div className="col-xl-6 col-lg-6 col-md-6">
             <div className="tp-mission-content">
               <p className="tp_fade_bottom">
-                This is where data, know-how, and creativity meet design and
-                walk the path to success. Thinking as one, acting as one; always
-                by your side pushing boundaries. Our highly specialized approach
-                offers a wide spectrum of services.!
+                At TYF Studio, we combine deep research, creative design, and thoughtful execution to build products and experiences that matter. Our approach is rooted in understanding your business, your users, and the bigger world around you — so we create with meaning, not just style.
               </p>
               <div className="tp-hover-btn-wrapper tp_fade_bottom">
                 <Link
                   className="tp-btn-circle-2 tp-hover-btn-item tp-hover-btn"
-                  href="/about-us"
+                  href="#"
                 >
                   <span>
                     <UpArrow />
@@ -59,12 +62,12 @@ export default function MissionOne() {
         </div>
       </div>
       <div className="tp-mission-right-thumb">
-        <Image
+        {/* <Image
           data-speed=".9"
           src={m_img_2}
           alt="thumb-img"
           style={{ height: "auto" }}
-        />
+        /> */}
       </div>
     </div>
   );

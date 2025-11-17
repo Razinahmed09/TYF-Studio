@@ -42,7 +42,7 @@ const  ThemeSetting = () => {
           </label>
         </div>
 
-        <div className="tp-theme-settings">
+        <div className="tp-theme-settings d-none">
           <div className="tp-theme-settings-wrapper">
             <div className="tp-theme-settings-open">
               <button

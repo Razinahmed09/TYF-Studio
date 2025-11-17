@@ -23,7 +23,7 @@ const menu_data:IMenuDT[] = [
   },
   {
     id: 2,
-    title: 'Pages',
+    title: 'Workshop',
     link: '#',
     // pages_mega_menu: {
     //   first: {
@@ -123,7 +123,7 @@ const menu_data:IMenuDT[] = [
   },
   {
     id: 4,
-    title: 'Blog',
+    title: 'About Us',
     link: '#',
     // dropdown_menus: [
     //   { title: 'Modern', link: '/blog-modern' },

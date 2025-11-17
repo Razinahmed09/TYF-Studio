@@ -407,3 +407,15 @@
         height: 100%;
     }
 }
+
+.tp-mission-area {
+    background: linear-gradient(90deg, #6b442d 0%, #41342c 54%, #2b2b2b 100%);
+}
+
+.tp-mission-area .tp-btn-circle-2:hover {
+        border: 1px solid #69432d;
+    color: white;
+}
+.tp-mission-area .tp-btn-circle-2:hover span {
+    color:white
+}

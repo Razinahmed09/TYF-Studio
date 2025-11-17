@@ -13,9 +13,10 @@ import HeroBannerTwo from "@/components/hero-banner/hero-banner-two";
 import HeroBannerFour from "@/components/hero-banner/hero-banner-four";
 import GalleryOne from "@/components/gallery/gallery-one";
 import AboutThree from "@/components/about/about-three";
+import MissionOne from "@/components/mission/mission-one";
 import BrandThree from "@/components/brand/brand-three";
 import ProjectFour from "@/components/project/project-four";
-
+import ContactTwo from "@/components/contact/contact-two";
 
 
 import { perspective } from "@/utils/perspective-anim";
@@ -124,13 +125,34 @@ const HomeFourMain = () => {
             {/* <VideoThree /> */}
             {/* video area end */}
 
+            {/* mission area start */}
+             <MissionOne />
+            {/* mission area end */}
+
             {/* service area start */}
-            <ServiceFour />
+            {/* <ServiceFour /> */}
             {/* service area end */}
 
-            {/* contact area start */}
-            <ContactOne />
-            {/* contact area end */}
+
+             {/* hero area start */}
+              <div className="tm-hero-area tm-hero-ptb p-relative pt-0">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xl-12">
+                      <div className="tm-hero-content">
+                        <span className="tm-hero-subtitle">Liko Studio</span>
+                        <h4 className="tm-hero-title-big tp-char-animation">
+                          Get in touch
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* hero area end */}
+             {/* contact area */}
+                          <ContactTwo/>
+              {/* contact area */}
 
           </main>
 

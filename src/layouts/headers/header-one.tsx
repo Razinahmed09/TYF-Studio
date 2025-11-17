@@ -5,7 +5,7 @@ import Link from "next/link";
 import HeaderMenus from "./header-menus";
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 import logo from "../../../public/assets/img/logo/TYFLOGO.png";
-import logoWhite from "../../../public/assets/img/logo/logo-white.png";
+import logoWhite from "../../../public/assets/img/logo/TYFLOGO.png";
 import useStickyHeader from "@/hooks/use-sticky-header";
 
 const HeaderOne = () => {
@@ -31,7 +31,7 @@ const HeaderOne = () => {
                     <Image style={{ width: "auto", height: "auto", borderRadius: "15px", padding: "5px 0"}} src={logo} alt="logo" width={85} height={26} />
                   </Link>
                   <Link className="logo-2" href="/">
-                    <Image style={{ width: "auto", height: "auto" }} src={logoWhite} alt="logo" width={85} height={26} />
+                    <Image style={{ width: "auto", height: "auto", borderRadius: "15px", padding: "5px 0" }} src={logoWhite} alt="logo" width={85} height={26} />
                   </Link>
                 </div>
               </div>

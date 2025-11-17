@@ -92,13 +92,13 @@ export default function PerspectivePortfolioSlider() {
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-6 col-6">
               <div className="tp-portfolio-9-social-info">
-                <span>
+                {/* <span>
                   Follow Us{" "}
                   <Share />
-                </span>
+                </span> */}
               </div>
             </div>
-            <div className="col-xl-6 col-lg-6 col-md-6 col-6">
+            <div className="col-xl-6 col-lg-6 col-md-6 col-6 d-none">
               <div className="tp-portfolio-9-scroll text-end">
                 <Link onClick={scrollTop} href="#">(Scroll)</Link>
               </div>

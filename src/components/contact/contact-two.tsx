@@ -1,10 +1,38 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import ContactForm from "../form/contact-form";
 import Social from "../social/social";
 import shape from "@/assets/img/inner-about/about/shape-1.png";
+// import shape from "@/assets/img/home-04/portfolio/galleryimage01.png";
 
 export default function ContactTwo() {
+  const images = [
+    "/assets/img/home-04/portfolio/galleryimage01.png",
+    "/assets/img/home-04/portfolio/galleryimage02.png",
+    "/assets/img/home-04/portfolio/galleryimage03.png",
+    "/assets/img/home-04/portfolio/gallerimage04.png",
+    "/assets/img/home-04/portfolio/gallerimage05.png"
+  ];
+
+  const [current, setCurrent] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // fade out
+
+      setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % images.length); // switch image
+        setFade(true); // fade in
+      }, 200); // fade duration (ms)
+    }, 400); // time per image (ms)
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <div className="cn-contactform-area cn-contactform-style p-relative pb-100">
       <div className="ab-2-hero-social-wrap d-none d-xl-block">
@@ -28,6 +56,19 @@ export default function ContactTwo() {
                 src={shape}
                 alt="shape"
               />
+              <div style={{ width: "50%", position: "relative" }}>
+                 <img
+                    src={images[current]}
+                    alt="slider"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "20px",
+                      transition: "opacity 0.4s ease-in-out",
+                      opacity: fade ? 1 : 0
+                    }}
+                  />
+              </div>
             </div>
           </div>
           <div className="col-xl-7">

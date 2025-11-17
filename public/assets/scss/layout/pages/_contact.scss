@@ -462,3 +462,20 @@
         }
     }
 }
+
+.tm-hero-area h4 {
+     /* gradient background */
+    background: linear-gradient(90deg, #84441e 0%, #3d322b 54%, #292929d1 100%);
+
+  /* show background through the text */
+  -webkit-background-clip: text; /* for WebKit browsers */
+  background-clip: text;         /* standard (not supported in older Firefox) */
+
+  /* make the text itself transparent so the gradient shows */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.ab-about-category-title-box .ab-about-shape-1 {
+        bottom: 132px !important;
+        right: 20% !important;
+}

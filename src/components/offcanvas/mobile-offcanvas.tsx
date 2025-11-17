@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
+import { Behance, CloseTwo, Dribble, Facebook, InstagramTwo, Twitter, Youtube } from "../svg";
 
 // images
 import logo from "@/assets/img/logo/TYFLOGO.png";
@@ -10,6 +10,7 @@ import gallery_3 from "@/assets/img/products/Continuum-min.jpg";
 import gallery_4 from "@/assets/img/products/Echo Forge-min.jpg";
 import MobileMenus from "./mobile-menus";
 import Link from "next/link";
+import { Linkedin } from "lucide-react";
 
 const gallery_images = [gallery_1, gallery_2, gallery_3, gallery_4];
 
@@ -27,7 +28,7 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="tp-offcanvas-logo">
               <Link href="#">
-                <Image src={logo} alt="logo" />
+                <Image src={logo} alt="logo" style={{background: "black", borderRadius: "12px"}} />
               </Link>
             </div>
             <div className="tp-offcanvas-close">
@@ -68,7 +69,7 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
                   <Link href="tel:1245654">+ 0 123 4567 8910</Link>
                 </li>
                 <li>
-                  <Link href="mailto:hello@diego.com">example@gmail.com</Link>
+                  <Link href="mailto:contact@TYFStudio.com">contact@TYF Studio.com</Link>
                 </li>
                 <li>
                   <Link href="#">Your Text Address Here</Link>
@@ -82,13 +83,13 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
                   <Link href="#"><InstagramTwo /></Link>
                 </li>
                 <li>
-                  <Link href="#"><Dribble /></Link>
+                  <Link href="#"><Facebook /></Link>
                 </li>
                 <li>
-                  <Link href="#"> <Behance /></Link>
+                  <Link href="#"> <Twitter /></Link>
                 </li>
                 <li>
-                  <Link href="#"><Youtube /></Link>
+                  <Link href="#"><Linkedin /></Link>
                 </li>
               </ul>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '@/assets/img/logo/logo-white.png';
+import logo from '@/assets/img/logo/TYFLOGO.png';
 import { RightArrow, SvgBgSm } from '@/components/svg';
 import Link from 'next/link';
 
@@ -10,16 +10,16 @@ export default function FooterFour() {
       <div className="tp-footer-3-area dark-bg pt-120">
         <div className="container">
           <div className="row">
-            <div className="col-xl-4 col-lg-6 col-md-6 mb-60">
+            <div className="col-xl-4 col-lg-6 col-md-6 ">
               <div className="tp-footer-3-widget-wrapper footer-col-3-1">
                 <div className="tp-footer-3-widget mb-40">
-                  <h4 className="tp-footer-3-title">Website map</h4>
+                  <h4 className="tp-footer-3-title">Quick Links</h4>
                   <div className="tp-footer-3-menu">
                     <ul>
                       <li><Link href="#">Home</Link></li>
-                      <li><Link href="#">About</Link></li>
-                      <li><Link href="#">Landing</Link></li>
-                      <li><Link href="#">Blog</Link></li>
+                      <li><Link href="#">Workshop</Link></li>
+                      <li><Link href="#">Portfolio</Link></li>
+                      <li><Link href="#">About Us</Link></li>
                       <li><Link href="#">Contact</Link></li>
                     </ul>
                   </div>
@@ -40,35 +40,32 @@ export default function FooterFour() {
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-6 col-md-6 mb-60">
+            <div className="col-xl-4 col-lg-6 col-md-6 ">
               <div className="tp-footer-3-widget text-md-center footer-col-3-2">
                 <div className="tp-footer-3-logo-box">
                   <p className="mb-100">
-                    Drop us a line sed id semper <br />
-                    risus in hend rerit.
+                    let’s shape your vision into <br /> hand-forged metal art.
                   </p>
                   <Link className="tp-footer-3-logo p-relative" href="/">
-                    <Image src={logo} alt="logo" />
+                    <Image src={logo} alt="logo" style={{borderRadius: "20px"}} />
                   </Link>
-                  <p className="tp-footer-3-copyright">
-                    {new Date().getFullYear()} Themepure <br /> © All rights reserved
-                  </p>
+                  
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-6 col-md-6 mb-60">
+            <div className="col-xl-4 col-lg-6 col-md-6 ">
               <div className="tp-footer-3-widget-wrapper footer-col-3-3">
                 <div className="tp-footer-3-widget mb-30">
                   <h4 className="tp-footer-3-title">Contact</h4>
                   <div className="tp-footer-2-contact-item">
                     <span>
-                      <Link href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
-                      target="_blank">740 NEW SOUTH HEAD RD, TRIPLE BAY SWFW 3108, NEW YORK</Link>
+                      <Link href="#"
+                      target="_blank">Your Address Here</Link>
                       </span>
                   </div>
                   <div className="tp-footer-2-contact-item">
-                    <span>P: <Link href="tel:+725214456">+ 725 214 456</Link></span>
-                    <span>E: <Link href="mailto:contact@liko.com">contact@liko.com</Link></span>
+                    <span>P: <Link href="tel:+111222444"> + 111 222 444</Link></span>
+                    <span>E: <Link href="mailto:contact@TYFStudio.com">contact@TYF Studio.com</Link></span>
                   </div>
                 </div>
                 <div className="tp-footer-3-widget">
@@ -81,6 +78,11 @@ export default function FooterFour() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="col-12">
+              <p className="tp-footer-3-copyright text-center text-white" style={{paddingTop: "50px", paddingBottom: "25px",}}> 
+                    {new Date().getFullYear()} All rights reserved — ©  <Link className="tp-footer-3-logo p-relative mb-0" href="https://thevisionbrands.com">  The-Vision-brands </Link>
+                  </p>
             </div>
           </div>
         </div>
